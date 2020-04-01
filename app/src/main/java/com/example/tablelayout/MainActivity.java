@@ -46,8 +46,11 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+                //On recupere la position
                 int postion = tab.getPosition();
+                //On recupere le fragment à cette position
                 Fragment fragment = fragments.get(postion);
+                //On remplace le fragment
                 ReplaceFragment(fragment);
 
                 // ou commen ca :
