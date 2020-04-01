@@ -11,6 +11,7 @@ import android.widget.FrameLayout;
 import com.example.tablelayout.Fragments.FirstFragment;
 import com.example.tablelayout.Fragments.MainFragment;
 import com.example.tablelayout.Fragments.SecondFragment;
+import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         //On instancie et declare les widgets
         TabLayout tabLayout = findViewById(R.id.tllTableLayout);
 
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 3"));
+
         //On declare le fragmentManager
         fragmentManager = getFragmentManager();
         ReplaceFragment(mainFragment);
@@ -46,11 +51,8 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                //On recupere la position
                 int postion = tab.getPosition();
-                //On recupere le fragment à cette position
                 Fragment fragment = fragments.get(postion);
-                //On remplace le fragment
                 ReplaceFragment(fragment);
 
                 // ou commen ca :
