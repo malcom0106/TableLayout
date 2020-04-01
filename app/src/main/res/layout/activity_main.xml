@@ -28,17 +28,6 @@
             android:layout_height="wrap_content"
             android:text="Wednesday" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabItem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tab5" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabItem2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tab6" />
     </com.google.android.material.tabs.TabLayout>
 
     <FrameLayout
